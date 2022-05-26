@@ -1,0 +1,17 @@
+.saldo {
+  width: 363px;
+  height: 96px;
+  margin-top: 500px;
+  margin-left: 107px;
+  border: 1px solid #e9ecef;
+  border-radius: 4px;
+  display: flex;
+}
+#pink {
+  color: #fd377e;
+  margin-left: 20px;
+}
+#conteud {
+  display: flex;
+  flex-direction: column;
+}

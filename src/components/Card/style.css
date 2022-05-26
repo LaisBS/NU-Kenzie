@@ -1,0 +1,19 @@
+.price {
+  position: relative;
+  left: 400px;
+  width: fit-content;
+  bottom: 80px;
+}
+.status {
+  width: 4px;
+  height: 87px;
+  margin: none;
+}
+.content {
+  margin-left: 50px;
+  position: relative;
+  top: -100px;
+}
+.all {
+  width: 560px;
+}

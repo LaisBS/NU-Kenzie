@@ -1,0 +1,47 @@
+.App-header {
+  margin-left: 150px;
+  margin-right: 150px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  height: 700px;
+}
+header {
+  width: 1100px;
+  height: 88px;
+  display: flex;
+  margin-left: 261px;
+  background: #f8f9fa;
+  box-shadow: 0px 4px 32px -12px rgba(0, 0, 0, 0.25);
+}
+#rosa {
+  color: #fd377e;
+  margin-right: 10px;
+}
+header button {
+  position: relative;
+  left: 800px;
+  width: 64px;
+  height: 40px;
+  top: 20px;
+  background: #e9ecef;
+  border: 1.4px;
+  border-radius: 8px;
+}
+#opcoes button {
+  background: #e9ecef;
+  border-radius: 8px;
+  width: 87px;
+  height: 40px;
+  border: 1.4px solid #e9ecef;
+  margin-left: 16px;
+}
+#opcoes {
+  position: absolute;
+  right: 150px;
+  top: 120px;
+}
+#nav {
+  position: absolute;
+  top: 120px;
+  left: 800px;
+}

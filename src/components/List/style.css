@@ -1,0 +1,17 @@
+li {
+  list-style: none;
+  float: right;
+  width: 560px;
+  height: 87px;
+  color: #212529;
+  background-color: #f8f9fa;
+  margin-bottom: 40px;
+  display: flex;
+}
+ul {
+  position: absolute;
+  right: 170px;
+  top: 200px;
+  display: flex;
+  flex-direction: column;
+}
