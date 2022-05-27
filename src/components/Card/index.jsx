@@ -7,7 +7,8 @@ function Card({ transaction, handleTrash }) {
         <div
           className="status"
           style={{
-            backgroundColor: transaction.type === "Entrada" ? "green" : "gray",
+            backgroundColor:
+              transaction.type === "Entrada" ? "#03B898" : "#E9ECEF",
           }}
         ></div>
       }
