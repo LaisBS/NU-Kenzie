@@ -1,13 +1,16 @@
 import Card from "../Card";
 import "./style.css";
 
-function List({ listTransactions }) {
+function List({ newArr, handleTrash }) {
   return (
     <ul>
-      {listTransactions.map((transaction, index) => (
-        <li>{<Card transaction={transaction} key={index} />}</li>
+      {newArr.map((transaction, index) => (
+        <li key={index}>
+          {<Card transaction={transaction} handleTrash={handleTrash} />}
+        </li>
       ))}
     </ul>
   );
 }
+
 export default List;

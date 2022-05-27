@@ -3,13 +3,13 @@
   margin-right: 150px;
   display: grid;
   grid-template-columns: 1fr 1fr;
-  height: 700px;
+  height: 500px;
 }
 header {
-  width: 1100px;
+  width: 1250px;
   height: 88px;
   display: flex;
-  margin-left: 261px;
+  padding-left: 280px;
   background: #f8f9fa;
   box-shadow: 0px 4px 32px -12px rgba(0, 0, 0, 0.25);
 }
@@ -19,7 +19,7 @@ header {
 }
 header button {
   position: relative;
-  left: 800px;
+  left: 880px;
   width: 64px;
   height: 40px;
   top: 20px;
@@ -27,6 +27,11 @@ header button {
   border: 1.4px;
   border-radius: 8px;
 }
+header button:focus {
+  background-color: #fd377e;
+  color: #e9ecef;
+}
+
 #opcoes button {
   background: #e9ecef;
   border-radius: 8px;
@@ -34,6 +39,10 @@ header button {
   height: 40px;
   border: 1.4px solid #e9ecef;
   margin-left: 16px;
+}
+#opcoes button:focus {
+  background-color: #fd377e;
+  color: #e9ecef;
 }
 #opcoes {
   position: absolute;
@@ -44,4 +53,50 @@ header button {
   position: absolute;
   top: 120px;
   left: 800px;
+}
+#svg {
+  position: absolute;
+  top: 200px;
+  right: 150px;
+  color: #5b6166;
+}
+@media (max-width: 900px) {
+  header {
+    margin-left: 0px;
+    left: 50px;
+    align-items: center;
+    padding: 0%;
+    min-width: 375px;
+    max-width: 50%;
+  }
+  header button {
+    left: 80px;
+    top: 2px;
+    width: 100px;
+    height: 70px;
+    font-size: x-large;
+  }
+  #opcoes {
+    display: flex;
+    left: 5px;
+    z-index: 1;
+    top: 85%;
+  }
+  .App-header {
+    margin: 0%;
+    grid-template: none;
+    width: 1000px;
+    height: 1000px;
+  }
+  #nav {
+    position: fixed;
+    top: 27%;
+    left: 20px;
+  }
+  #svg {
+    top: 100%;
+    left: 20px;
+    width: 100%;
+    overflow-x: scroll;
+  }
 }

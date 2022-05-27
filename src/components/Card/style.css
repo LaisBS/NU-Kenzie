@@ -17,3 +17,26 @@
 .all {
   width: 560px;
 }
+.trash {
+  position: relative;
+  left: 480px;
+  width: fit-content;
+  bottom: 115px;
+}
+.trash:hover {
+  filter: invert(1);
+}
+@media (max-width: 900px) {
+  .price {
+    left: 180px;
+  }
+  .trash {
+    left: 200px;
+    bottom: 70px;
+  }
+  .content {
+    max-width: 250px;
+
+    max-height: 50px;
+  }
+}

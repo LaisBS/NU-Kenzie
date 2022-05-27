@@ -70,17 +70,24 @@ form {
 }
 
 form button {
-  width: 314px;
+  width: 335px;
   height: 48px;
-  background-color: #fd377e;
   border: 2px solid;
   border-radius: 8px;
   color: white;
   position: absolute;
+  background-color: #fd377e;
   top: 80%;
 }
 #tipoValor {
   position: absolute;
   left: 60%;
   top: 45%;
+}
+@media (max-width: 900px) {
+  .form {
+    position: fixed;
+    left: 0;
+    z-index: 1;
+  }
 }
