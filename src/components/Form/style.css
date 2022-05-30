@@ -86,8 +86,7 @@ form button {
 }
 @media (max-width: 900px) {
   .form {
-    position: fixed;
+    position: absolute;
     left: 0;
-    z-index: 1;
   }
 }

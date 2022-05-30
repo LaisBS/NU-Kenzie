@@ -1,4 +1,4 @@
-.App-header {
+#App-header {
   margin-left: 150px;
   margin-right: 150px;
   display: grid;
@@ -19,7 +19,7 @@ header {
 }
 header button {
   position: relative;
-  left: 880px;
+  left: 700px;
   width: 64px;
   height: 40px;
   top: 20px;
@@ -44,22 +44,18 @@ header button:focus {
   background-color: #fd377e;
   color: #e9ecef;
 }
-#opcoes {
+#area {
   position: absolute;
-  right: 150px;
-  top: 120px;
-}
-#nav {
-  position: absolute;
-  top: 120px;
-  left: 800px;
+  right: 250px;
 }
 #svg {
-  position: absolute;
-  top: 200px;
-  right: 150px;
   color: #5b6166;
+  padding-left: 40px;
 }
+.resumo {
+  padding: 40px;
+}
+
 @media (max-width: 900px) {
   header {
     margin-left: 0px;
@@ -79,24 +75,28 @@ header button:focus {
   #opcoes {
     display: flex;
     left: 5px;
-    z-index: 1;
     top: 85%;
   }
   .App-header {
     margin: 0%;
     grid-template: none;
-    width: 1000px;
-    height: 1000px;
-  }
-  #nav {
-    position: fixed;
-    top: 27%;
-    left: 20px;
   }
   #svg {
-    top: 100%;
     left: 20px;
-    width: 100%;
+    width: 100vw;
+    height: 150vw;
     overflow-x: scroll;
+  }
+  .resumo {
+    display: flex;
+    box-sizing: border-box;
+    padding: 10px;
+    flex-direction: column;
+    align-items: center;
+  }
+  #area {
+    position: absolute;
+    left: 0;
+    top: 150vw;
   }
 }
