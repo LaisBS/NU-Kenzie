@@ -88,5 +88,6 @@ form button {
   .form {
     position: absolute;
     left: 0;
+    margin: 0;
   }
 }
