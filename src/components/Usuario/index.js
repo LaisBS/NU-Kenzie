@@ -4,8 +4,9 @@ import Form from "../Form";
 import List from "../List";
 import TotalMoney from "../totalMoney";
 import noCard from "../images/NoCard.svg";
-import { Link } from "react-router-dom";
-import "./style.css";
+import { useHistory } from "react-router-dom";
+import { Header, Container, Content, ResumoFinanceiro } from "./style.js";
+import NuKenzie from "../images/Nu Kenzie black.svg";
 
 function Usuario() {
   const [listTransactions, setListTransactions] = useState([]);
@@ -20,30 +21,35 @@ function Usuario() {
     });
     return setListTransactions(novaArr);
   }
+  const history = useHistory();
+  function handleClick() {
+    return history.push("/");
+  }
   return (
-    <div className="App">
-      <header>
-        <h1 id="rosa">Nu</h1>
-        <h1>Kenzie</h1>
-        <Link to="/">Inicio</Link>
-      </header>
-      <main id="App-header">
-        <Form
-          listTransactions={listTransactions}
-          setListTransactions={setListTransactions}
-        />
-        {listTransactions.length > 0 && (
-          <TotalMoney listTransactions={listTransactions} />
-        )}
-        <div id="area">
-          <div className="resumo">
+    <Container>
+      <Header>
+        <img src={NuKenzie} />
+        <button onClick={() => handleClick()}>Inicio</button>
+      </Header>
+      <Content>
+        <section>
+          <Form
+            listTransactions={listTransactions}
+            setListTransactions={setListTransactions}
+          />
+          {listTransactions.length > 0 && (
+            <TotalMoney listTransactions={listTransactions} />
+          )}
+        </section>
+        <ResumoFinanceiro>
+          <section>
             <h3 id="nav">Resumo financeiro</h3>
             <div id="opcoes">
               <button onClick={() => setFiltros("Todos")}>Todos</button>
               <button onClick={() => setFiltros("Entrada")}>Entradas</button>
               <button onClick={() => setFiltros("Saída")}>Despesas</button>
             </div>
-          </div>
+          </section>
           {newArr.length === 0 ? (
             <div id="svg">
               <h2>Você ainda não possui nenhum lançamento</h2>
@@ -52,9 +58,9 @@ function Usuario() {
           ) : (
             <List newArr={newArr} handleTrash={handleTrash} />
           )}
-        </div>
-      </main>
-    </div>
+        </ResumoFinanceiro>
+      </Content>
+    </Container>
   );
 }
 

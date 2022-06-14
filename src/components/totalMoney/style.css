@@ -1,11 +1,11 @@
 .saldo {
-  width: 363px;
   height: 96px;
-  margin-top: 450px;
-  margin-left: 107px;
+  margin-top: 10px;
   border: 1px solid #e9ecef;
   border-radius: 4px;
   display: flex;
+  padding: 10px;
+  justify-content: center;
 }
 #pink {
   color: #fd377e;
@@ -14,12 +14,4 @@
 #conteud {
   display: flex;
   flex-direction: column;
-}
-@media (max-width: 900px) {
-  .saldo {
-    position: absolute;
-    top: 1000px;
-    left: 0;
-    margin: 0;
-  }
 }

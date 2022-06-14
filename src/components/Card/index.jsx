@@ -13,8 +13,10 @@ function Card({ transaction, handleTrash }) {
         ></div>
       }
       <div className="content">
-        <h3>{transaction.description}</h3>
-        <span>{transaction.type}</span>
+        <div id="text">
+          <h3>{transaction.description}</h3>
+          <span>{transaction.type}</span>
+        </div>
         <p className="price">
           {new Intl.NumberFormat([], {
             style: "currency",

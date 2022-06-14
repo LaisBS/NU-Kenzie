@@ -1,6 +1,7 @@
 import { useState } from "react";
 import React from "react";
-import "./style.css";
+import { Formulario, Section } from "./style.js";
+import { TbCurrencyReal } from "react-icons/tb";
 
 function Form({ listTransactions, setListTransactions }) {
   const [valueInput, setValueInput] = useState("");
@@ -16,30 +17,30 @@ function Form({ listTransactions, setListTransactions }) {
     }
   }
   return (
-    <div className="form">
-      <form onSubmit={prevent}>
-        <p>Descrição</p>
-        <input
-          id="description"
-          placeholder="Digite aqui sua descrição"
-          value={descriptionValue}
-          onChange={(event) => setDescriptionInput(event.target.value)}
-        ></input>
-        <div>
-          <p id="areaValor">Valor</p>
-          <span id="rs">R$</span>
+    <Formulario onSubmit={prevent}>
+      <label htmlFor="description">Descrição</label>
+      <input
+        name="description"
+        placeholder="Digite aqui sua descrição"
+        value={descriptionValue}
+        onChange={(event) => setDescriptionInput(event.target.value)}
+      ></input>
+      <div>
+        <Section>
+          <label htmlFor="valor">Valor</label>
           <input
-            id="valor"
+            name="valor"
             placeholder="1"
             type="number"
             value={valueInput}
             onChange={(event) => setValueInput(event.target.value)}
           ></input>
-          <p id="tipoValor">Tipo de valor</p>
-        </div>
-        <div>
+          <TbCurrencyReal />
+        </Section>
+        <Section>
+          <label htmlFor="select">Tipo de valor</label>
           <select
-            id="select"
+            name="select"
             value={typeValue}
             onChange={(event) => setTypeSelect(event.target.value)}
           >
@@ -47,10 +48,10 @@ function Form({ listTransactions, setListTransactions }) {
             <option>Entrada</option>
             <option>Saída</option>
           </select>
-        </div>
-        <button type="submit">Inserir valor</button>
-      </form>
-    </div>
+        </Section>
+      </div>
+      <button type="submit">Inserir valor</button>
+    </Formulario>
   );
 }
 
